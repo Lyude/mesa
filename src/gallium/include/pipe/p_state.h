@@ -90,8 +90,8 @@ struct pipe_rasterizer_state
    unsigned clamp_fragment_color:1;
    unsigned front_ccw:1;
    unsigned cull_face:2;      /**< PIPE_FACE_x */
-   unsigned fill_front:2;     /**< PIPE_POLYGON_MODE_x */
-   unsigned fill_back:2;      /**< PIPE_POLYGON_MODE_x */
+   unsigned fill_front:3;     /**< PIPE_POLYGON_MODE_x */
+   unsigned fill_back:3;      /**< PIPE_POLYGON_MODE_x */
    unsigned offset_point:1;
    unsigned offset_line:1;
    unsigned offset_tri:1;
