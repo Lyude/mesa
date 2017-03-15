@@ -261,6 +261,10 @@ nvc0_rasterizer_state_create(struct pipe_context *pipe,
     SB_IMMED_3D(so, POINT_SPRITE_ENABLE, cso->point_quad_rasterization);
     SB_IMMED_3D(so, POINT_SMOOTH_ENABLE, cso->point_smooth);
 
+    SB_IMMED_3D(so, FILL_RECTANGLE,
+                cso->fill_front == PIPE_POLYGON_MODE_FILL_RECTANGLE ?
+                NVC0_3D_FILL_RECTANGLE_ENABLE : 0);
+
     SB_BEGIN_3D(so, MACRO_POLYGON_MODE_FRONT, 1);
     SB_DATA    (so, nvgl_polygon_mode(cso->fill_front));
     SB_BEGIN_3D(so, MACRO_POLYGON_MODE_BACK, 1);
