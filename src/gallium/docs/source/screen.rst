@@ -392,6 +392,8 @@ The integer capabilities:
 * ``PIPE_CAP_CAN_BIND_CONST_BUFFER_AS_VERTEX``: Whether a buffer with just
   PIPE_BIND_CONSTANT_BUFFER can be legally passed to set_vertex_buffers.
 * ``PIPE_CAP_ALLOW_MAPPED_BUFFERS_DURING_EXECUTION``: As the name says.
+* ``PIPE_CAP_POST_DEPTH_COVERAGE``: Whether
+  ``pipe_rasterizer_state::post_depth_coverage`` is supported.
 
 
 .. _pipe_capf:
